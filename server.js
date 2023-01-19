@@ -21,6 +21,10 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("Connected to DB"))
     .catch(err => console.log(err));
 
+app.get('/', (req, res) => {
+    res.send("API is running at https://user-auth-g661.onrender.com/api/user");
+});    
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`)
 });
